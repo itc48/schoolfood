@@ -1,0 +1,11 @@
+stages:
+  - deploy
+
+deploy:
+ stage: deploy
+ only:
+    - master
+ tags:
+    - srv23166
+ script:
+    - rsync -r . /home/treatwo/school/back

@@ -1,0 +1,67 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: ptrootui;
+    src: url("../media/font/ptrootui.woff");
+}
+
+@font-face {
+    font-family: ptrootuibold;
+    src: url("../media/font/ptrootuibold.woff");
+}
+
+/*общие стили*/
+html {
+    font-size: 100%;
+    font-family: ptrootui;
+}
+
+body {
+    background-image: url("../media/img/backgroundimages/mainbg.svg");
+    background-color: rgb(234, 234, 234);
+    padding: 2.2rem 0 0 0;
+    margin: 0;
+}
+
+/*общие стили, конец*/
+
+.main__page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 90vh;
+}
+
+.main__page img {
+    width: 30vw;
+    height: 30vw;
+    object-position: center;
+    object-fit: contain;
+}
+
+.main__page input {
+    display: none;
+}
+
+.main__page a {
+    cursor: pointer;
+    background-color: #3B6C69;
+    color: white;
+    padding: 1vw 3vw;
+    border-radius: .7vw;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+    .main__page img {
+        width: 70vw;
+        height: 70vw;
+    }
+
+    .main__page a {
+        padding: 2vw 6vw;
+    }
+}

@@ -1,0 +1,36 @@
+version: '3.5'
+
+services:
+
+  apache_monitor:
+    image: httpd:2.4
+    container_name: apache_monitor
+    restart: always
+    volumes:
+      - /home/docker/projects/monitor:/var/www/html
+      - ./httpd/httpd.conf:/usr/local/apache2/conf/httpd.conf
+    depends_on:
+      - php_monitor
+    networks:
+      - ndb_net
+      - monitor_net
+    
+  php_monitor:
+    build: ./php
+    restart: always
+    container_name: php_monitor
+    # user: ${UID:-1000}:${GID:-1000}
+    volumes:
+      - /home/docker/projects/monitor:/var/www/html
+    #   - /home/gis_service/photo/FINISH:/var/www/html/storage/img
+    networks:
+      - monitor_net
+
+#####################################################################networks
+networks:
+  ndb_net:
+    external:
+      name: ndb_net
+  monitor_net:
+    name: monitor_net
+    driver: bridge

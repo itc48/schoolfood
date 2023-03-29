@@ -1,0 +1,1472 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: ptrootui;
+    src: url("../media/font/ptrootui.woff");
+}
+
+@font-face {
+    font-family: ptrootuibold;
+    src: url("../media/font/ptrootuibold.woff");
+}
+
+@font-face{
+    font-family:Manrope-Regular;
+    src:url("../media/font/Manrope-Regular.woff");
+}
+
+@font-face{
+    font-family:Inter-Regular;
+    src:url("../media/font/Inter-Regular.woff");
+}
+
+html {
+    font-size: 100%;
+    font-family: ptrootui;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+/*body {
+    padding-top: 3rem;
+    height: 100vh;
+}
+
+.link {
+    color: darkorange;
+    text-decoration: none;
+    position: relative;
+}
+
+.link::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 1px;
+    background-color: darkorange;
+    transition: .35s;
+}
+
+.link:hover::before {
+    width: 100%;
+    left: 0;
+}
+
+.login-body {
+    padding-top: 0;
+}
+
+!*стили для внутренней страницы*!
+
+.profile-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 3rem;
+}
+
+.profile-wrapper > .block {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.profile-wrapper > .block > * {
+    margin-right: 1rem;
+}
+
+.profile-wrapper > .block > *:last-child {
+    margin-right: 0;
+}
+
+.profile-wrapper input[type="submit"] {
+    background: none;
+    border: .1rem solid black;
+    border-radius: .3rem;
+}
+
+.header-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-wrapper a, .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+    background-color: darkorange;
+    padding: .25rem;
+    border-radius: .25rem;
+    border: none;
+}
+
+.button {
+    cursor: pointer;
+    !*width: 100%;*!
+    box-sizing: border-box;
+}
+
+.button:disabled {
+    background-color: grey;
+}
+
+.button > img {
+    width: 1rem;
+    height: 1rem;
+    object-fit: contain;
+    object-position: center;
+    margin-right: .5rem;
+}
+
+.small-button {
+    font-size: .75rem;
+}
+
+.container {
+    max-width: 60rem;
+    width: 100%;
+    margin: auto;
+}
+
+.data-table {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 3rem;
+}
+
+.data-table > .row, .data-table > .review-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: .5rem 0;
+}
+
+.data-table > .row > .col, .data-table > .review-row > .col {
+    display: flex;
+    flex-direction: column;
+    width: 10rem;
+}
+
+.data-table > .review-row, .data-table > .row {
+    border-bottom: 1px solid #eee;
+}
+
+.data-table > .review-row > .col {
+    width: 10rem;
+}
+
+.data-table > .row > .col:first-child {
+    width: 25rem;
+}
+
+.data-table > .row > .col:nth-child(2) {
+    width: 20rem;
+}
+
+.data-table > .row > .col:nth-child(3) {
+    width: 5rem;
+}
+
+.data-table > .row > .col:last-child {
+    padding-left: 4rem;
+}
+
+.data-table > .row > .col:last-child > a {
+    margin-bottom: .5rem;
+}
+
+.data-table > .row > .col:nth-last-child(3) {
+    width: 8rem;
+}
+
+.data-table > .row > .col:nth-last-child(2) {
+    width: 5rem;
+}
+
+.data-table > .review-row > .col:first-child, .data-table > .review-row > .col:nth-child(2) {
+    width: 5rem;
+}
+
+.data-table > .review-row > .col:last-child {
+    width: 15rem;
+}
+
+.data-table > .review-row > .col > img {
+    max-width: 15rem;
+    object-fit: contain;
+    object-position: center;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: .5rem;
+}
+
+.action-buttons > * {
+    width: 49%;
+}
+
+.negative-color {
+    color: #fa603a;
+}
+
+.positive-color {
+    color: #7cfa46;
+}
+
+.data-table > .review-row > .text-col {
+    width: 20rem;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+header > div:first-child {
+    width: 70%;
+}
+
+.links-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.links-wrapper > a {
+    margin-left: 1rem;
+}
+
+.create-form {
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+}
+
+.create-form > input, .create-form > select {
+    margin-bottom: 1rem;
+    padding: .5rem;
+}
+
+.create-form > input[type="submit"] {
+    border: none;
+}
+
+#logout-button {
+    padding: .5rem;
+    cursor: pointer;
+}
+
+!*стили для внутренней страницы, конец*!
+
+
+!*стили для страницы авторизации*!
+
+/*стили для страницы авторизации*/
+
+
+/* --- NEW LAYOUT --- */
+
+body{
+    padding:0 0 0 17rem;
+    margin:0;
+    font-family: Inter-Regular;
+    transition: all .3s ease;
+}
+
+.login-body {
+    min-height: 100vh;
+    padding: 0;
+}
+
+.login-form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.login-form {
+    max-width: 23.177rem;
+    width: 100%;
+    margin: -2.1875rem auto 0;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    border-radius: .3rem;
+}
+
+.login-form > h2 {
+    margin-top: 0;
+    margin-bottom: .3125rem;
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 150%;
+    color: #343A40;
+}
+
+.login-form > section {
+    width: 100%;
+    background: #F8F8F8;
+    border: 1px solid #E1E2E3;
+    padding: 1.3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-sizing: border-box;
+}
+
+.login-form > section label {
+    font-size: .781rem;
+    line-height: 140%;
+    color: #21252A;
+    margin-bottom: .416rem;
+}
+
+.login-form > section input {
+    width: 100%;
+    padding: .520rem .4166rem;
+    margin-bottom: 1.25rem;
+    outline: none;
+    background: #F8F9FA;
+    border: 1px solid #ADB5BD;
+    box-sizing: border-box;
+    border-radius: .3125rem;
+}
+
+.remember-me__wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 2.083rem;
+}
+
+.login-form > section > .remember-me__wrapper > input {
+    width: .9375rem;
+    height: .9375rem;
+    margin-bottom: 0;
+    margin-right: .572rem;
+}
+
+.login-form > section > .remember-me__wrapper > label {
+    margin-bottom: 0;
+    font-size: .72916rem;
+}
+
+.login-form > section input[type="submit"], .submit-button {
+    display: inline-block;
+    cursor: pointer;
+    width: auto;
+
+    padding: .5rem 2.1rem;
+    margin-bottom: 0;
+    font-weight: 600;
+    font-size: .729rem;
+    line-height: 140%;
+    color: #F8F9FA;
+
+    border: none;
+    background: #FF8F70 !important;
+    border-radius: .3125rem;
+}
+
+.main-menu{
+    left:0;
+    width:16rem;
+    height:100%;
+    position:fixed;
+    padding: 1rem 0;
+    background-color: #EFEFEF;
+}
+
+.main-menu h1{
+    font-size: 1.15rem;
+    text-transform: uppercase;
+    padding: 0 8%;
+    padding-bottom: 10%;
+}
+
+.main-menu ul{
+    padding:0;
+    list-style: none;
+}
+
+.main-menu ul li{
+    height:4rem;
+    padding: 0 8%;
+    display: flex;
+    align-items: center;
+}
+
+.main-menu ul li svg{
+    fill:#A4A5A5;
+}
+
+.main-menu ul li:hover, .active-menu-link{
+    background-color:#E3E3E3;
+    cursor: pointer;
+}
+
+.main-menu ul li:hover svg, .active-menu-link svg{
+    fill:#FF8F70 !important;
+}
+
+.main-menu ul li:hover a, .active-menu-link a{
+    font-weight:bold;
+}
+
+.main-menu ul li a{
+    color:black;
+    text-decoration:none;
+    margin-left:1rem;
+    width: 100%;
+    height: 50%;
+    margin-top: 5%;
+}
+
+/*шапка основного контейнера*/
+.header-wrapper{
+    margin:0 auto;
+    max-width:87.5rem;
+    width:99%;
+    padding:0 .5%;
+    display:flex;
+    justify-content:space-between;
+    padding:1rem 0;
+    /*position:relative;*/
+}
+
+.logo-wrapper{
+    display:flex;
+    justify-content: space-between;
+}
+
+.logo-text{
+    font-family:Manrope-Regular;
+    margin:0 0 0 1rem;
+    display:flex;
+    align-items:center;
+    line-height:140%;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.25rem;
+    color: #495057;
+}
+
+.search-icon-button-wrapper{
+    display:none;
+}
+
+.search-wrapper{
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+}
+
+.search-wrapper>label{
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    position:relative;
+}
+
+.search-icon{
+    position:absolute;
+    left:.35rem;
+}
+
+.search-input{
+    width:19.75rem;
+    height:2.35rem;
+    padding: 0 0 0 1.75rem;
+    box-sizing:border-box;
+    border-radius: 6px;
+    border: 1px solid #ADB5BD;
+    background: #F8F9FA;
+}
+
+.profile-icon-button-wrapper{
+    display:none;
+}
+
+.profile-wrapper{
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+}
+
+.profile-name{
+    text-align: left;
+
+}
+
+.profile-role{
+    color: #868E96;
+}
+
+.profile-name{
+    margin-right:.75rem;
+    font-weight:bold;
+}
+
+.profile-button{
+    width:8rem;
+    height:2.5rem;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border: 1px solid #CFD4DA;
+    box-sizing: border-box;
+    border-radius: 6px;
+    text-decoration:none;
+    color:black;
+}
+
+.filter-icon-button-wrapper{
+    display:none;
+}
+
+/*тут начинается второй контейнер которые содержит заголовок, кнопки и фильтрацию*/
+.sidebar-wrapper{
+    margin:0 auto;
+    margin-top:3.75rem;
+    max-width:87.5rem;
+    width:99%;
+    padding:0 .5%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title-wrapper{
+    display:flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.back-to-school-button {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-right: 1rem;
+    margin-bottom: 2rem;
+
+}
+
+.back-to-school-button > svg{
+    fill:#868E96;
+}
+
+.title{
+    max-width:48rem;
+    margin: 0;
+}
+
+.subtitle {
+    color: #868E96;
+    font-weight: normal;
+    font-size: 1.25rem;
+}
+
+.addschool-button{
+    width:7.8125rem;
+    height:2.35rem;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background: #FF8F70;
+    border-radius: 6px;
+    color:#fff;
+    text-decoration:none;
+    margin-left:1.625rem;
+    border: none;
+}
+
+.addschool-button2{ /*для скачать отчёт*/
+    width:10.8125rem;
+    height:2.35rem;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background: #FF8F70;
+    border-radius: 6px;
+    color:#fff;
+    text-decoration:none;
+    margin-left:1.2rem;
+    margin-top: 1.350em;
+    border: none;
+}
+
+.addschool-button1{ /* я добавил */
+    width:10.8125rem;
+    height:2.35rem;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background: #FF8F70;
+    border-radius: 6px;
+    color:#fff;
+    text-decoration:none;
+    margin-top:1.625rem;
+    margin-left: 8.9em;
+    border: none;
+}
+
+.filters-wrapper{
+    display:flex;
+    align-items: flex-end;
+}
+
+.filter-dashboard{
+    border: 1px solid #DEE2E6;
+    border-radius: 6px;
+    min-width:13rem;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    padding:.15rem;
+    box-sizing: border-box;
+    margin-left:.35rem;
+}
+
+.filter-dashboard-number{
+    font-size:2.5rem;
+    color:#FF8F70;
+    margin:0;
+}
+
+.filter-dashboard-text{
+    word-break: break-word;
+    margin:0 .5rem;
+}
+
+.filters-wrapper > select, .filters-wrapper input[type="date"]{
+    margin-right: 1rem;
+    width:13.5rem;
+    height:2.35rem;
+    border-radius: 6px;
+    border: 1px solid #ADB5BD;
+    background: #F8F9FA;
+    color: #868E96;
+    box-sizing: border-box;
+    padding:0 .5rem;
+}
+
+.filters-wrapper input[type="date"]{
+    width:9rem;
+}
+
+.filters-wrapper > label{
+    color: #868E96;
+    margin-left:1.1rem;
+}
+
+.filters-wrapper > label > select{
+    width:13.5rem;
+    height:2.35rem;
+    border-radius: 6px;
+    border: 1px solid #ADB5BD;
+    background: #F8F9FA;
+    color: #868E96;
+    padding:0 .5rem;
+}
+
+/*дальше идут стили на таблицу со школами*/
+
+.review__table {
+    display: flex;
+    flex-direction: column;
+    max-width:87.99rem;
+}
+
+.review__table-header {
+    color:#868E96;
+}
+
+.review__table > ul {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    list-style-type: none;
+    border-bottom: .1rem solid #BFC8D0;
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+}
+
+.review__table > ul > li {
+    width: 100%;
+}
+
+.table-wrapper{
+    margin:0 auto;
+    margin-top:3.75rem;
+    max-width:87.99rem;
+    overflow: auto;
+}
+
+.table-wrapper1{
+    margin: auto;
+    margin-top:3.75rem;
+    max-width:87.99rem;
+    overflow: auto;
+}
+
+.table{
+    width:100%;
+    padding:0 .5%;
+    min-width:87.5rem;
+    box-sizing:border-box;
+}
+
+.table1{
+    padding:0 .5%;
+    box-sizing:border-box;
+}
+
+.table-header-row,
+.table-row{
+    display:flex;
+    align-items: center;
+    padding:0;
+    margin:0;
+    list-style: none;
+    width:100%;
+    border-bottom: .1rem solid #BFC8D0;
+    padding-bottom: .9rem;
+}
+
+.table-row{
+    align-items: flex-start;
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+}
+
+.table-header-row li{
+    color:#868E96;
+}
+
+.table-header-row li:nth-child(1),
+.table-row li:nth-child(1){
+    width:26rem;
+    padding-right:1rem;
+}
+.table-header-row li:nth-child(2),
+.table-row li:nth-child(2){
+    width:18rem;
+}
+.table-header-row li:nth-child(3),
+.table-row li:nth-child(3){
+    width:13rem;
+}
+.table-header-row li:nth-child(4),
+.table-row li:nth-child(4){
+    width:13rem;
+}
+.table-header-row li:nth-child(5),
+.table-row li:nth-child(5){
+    width:20rem;
+}
+
+.link-in{
+    color:black;
+    text-decoration:none;
+    position:relative;
+    display: block;
+}
+
+.link-in:after{
+    content:"";
+    background-image:url("../media/icons/icon-link.svg");
+    background-repeat: no-repeat;
+    width:1.1rem;
+    height:1.1rem;
+    display: none;
+    position: absolute;
+    right: 0%;
+    top: 0%;
+}
+
+.link-in:hover:after{
+    display: block;
+}
+
+.link-in:hover{
+    text-decoration:underline;
+}
+
+.action-zone{
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.action-zone > form{
+    margin-left:.75rem;
+}
+
+.action-zone > form > button > a > svg{
+    padding:0;
+}
+
+.action-zone a{
+    color:#BFC8D0;
+}
+
+.action-zone a svg{
+    padding-right:1.5rem;
+    fill:#BFC8D0;
+}
+
+.action-zone a:hover{
+    color:black;
+}
+
+.action-zone a:hover svg{
+    fill:black;
+}
+
+.qr-button-action{
+    padding: .5rem;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #CFD4DA;
+    border-radius: 6px;
+    color:black;
+    text-decoration:none;
+}
+
+.qr-button-action > svg{
+    padding-right:1rem;
+}
+
+.fix-button{
+    padding:.7rem;
+    margin-left: .75rem;
+}
+
+
+/*тут идут стили менюшки конкретной школы*/
+
+.tools-wrapper{
+    margin:0 auto;
+    margin-top:3.75rem;
+    max-width:87.5rem;
+    width:99%;
+    padding:0 .5%;
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.tools-wrapper > a{
+    margin-right: 1rem;
+}
+
+.tools-wrapper > label{
+    color: #868E96;
+    margin-left:1.1rem;
+}
+
+.tools-wrapper > label > select{
+    min-width:7.5rem;
+    height:2.35rem;
+    border-radius: 6px;
+    border: 1px solid #ADB5BD;
+    background: #F8F9FA;
+    color: #868E96;
+    padding:0 .5rem;
+}
+
+/*стили второй таблицы*/
+
+.appeal-table{
+    width:100%;
+    padding:0 .5%;
+    min-width:87.5rem;
+    box-sizing:border-box;
+}
+
+.appeal-table-header-row,
+.appeal-table-row{
+    display:flex;
+    align-items: center;
+    padding:0;
+    margin:0;
+    list-style: none;
+    width:100%;
+    border-bottom: .1rem solid #BFC8D0;
+    padding-bottom: .9rem;
+}
+
+.appeal-table-row{
+    align-items: flex-start;
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+}
+
+.appeal-table-header-row li{
+    color:#868E96;
+}
+
+.appeal-table-header-row li:nth-child(1),
+.appeal-table-row li:nth-child(1){
+    width:5rem;
+    padding-right:1rem;
+}
+.appeal-table-header-row li:nth-child(2),
+.appeal-table-row li:nth-child(2){
+    width:5rem;
+}
+.appeal-table-header-row li:nth-child(3),
+.appeal-table-row li:nth-child(3){
+    width:40rem;
+}
+.appeal-table-header-row li:nth-child(4),
+.appeal-table-row li:nth-child(4){
+    width:10rem;
+}
+.appeal-table-header-row li:nth-child(5),
+.appeal-table-row li:nth-child(5){
+    width:10rem;
+}
+
+.appeal-table-header-row li:nth-child(6),
+.appeal-table-row li:nth-child(6){
+    width:15rem;
+}
+
+.estimation-green{
+    color:#11BD4B;
+}
+
+.estimation-red{
+    color:#C81919;
+}
+
+/*форма добавления школы*/
+
+.form-wrapper{
+    margin:0 auto;
+    max-width:87.5rem;
+    width:99%;
+    padding:0 .5%;
+}
+
+.form-wrapper form fieldset{
+    border:0;
+    max-width:43.75rem;
+    background-color: #F8F8F8;
+    padding:1rem 2rem;
+    box-sizing: border-box;
+}
+
+.form-wrapper label{
+    font-family: Inter-Regular;
+    font-style: normal;
+    font-weight: normal;
+    color: #21252A;
+}
+
+.form-wrapper label > i{
+    font-style: normal;
+    color: red;
+}
+
+.form-wrapper input,
+.form-wrapper textarea{
+    margin-bottom: 2rem;
+    padding:0 .5rem;
+    box-sizing: border-box;
+    background-color: #F8F8F8;
+    border: 1px solid #ADB5BD;
+    border-radius: 6px;
+    min-height:2rem;
+}
+
+#school-name{
+    max-width:39.5rem;
+    width: 100%;
+    min-height:3.75rem;
+    background-color: #F8F8F8;
+    border: 1px solid #ADB5BD;
+    border-radius: 6px;
+}
+#school-address{
+    max-width:39.5rem;
+    width: 100%;
+    min-height:2rem;
+    background-color: #F8F8F8;
+    border: 1px solid #ADB5BD;
+    border-radius: 6px;
+}
+
+
+#district-name, .form__input{
+    max-width:39.5rem;
+    width: 100%;
+    min-height:2rem;
+    background-color: #F8F8F8;
+    border: 1px solid #ADB5BD;
+    border-radius: 6px;
+}
+
+.button-form-district {
+    background-color: #FF8F70 !important;
+    color: #F8F9FA;
+    border: 0;
+    border-radius: 6px;
+    width: 8rem;
+    height: 2.2rem;
+    margin-bottom: 0 !important;
+}
+.user-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.user-wrapper > label {
+    width: 40%;
+}
+
+.user-wrapper > label > input {
+    width: 100%;
+}
+
+.form-input-wrapper{
+    display:flex;
+    justify-content: space-between;
+}
+
+.form-input-wrapper > label{
+    max-width:20rem;
+    width: 100%;
+}
+
+#school-district,#school-status {
+    width: 100%;
+    min-height:2rem;
+    background-color: #F8F8F8;
+    border: 1px solid #ADB5BD;
+    border-radius: 6px;
+    margin-bottom: 1.5rem;
+}
+
+.coords{
+    display: flex;
+    justify-content: space-between;
+    width:14rem;
+}
+
+.coords > label{
+    max-width:6rem;
+    width: 100%;
+}
+
+.coords > label > input{
+    width: 100%;
+    min-height:2rem;
+    background-color: #F8F8F8;
+    border: 1px solid #ADB5BD;
+    border-radius: 6px;
+}
+
+.review__img {
+    height: 7.083rem;
+    width: 7.083rem;
+    object-fit: cover;
+    object-position: center;
+    border-radius: .3125rem;
+}
+
+/*стили таблицы районов*/
+
+.district-table{
+    width:100%;
+    padding:0 .5%;
+    min-width:87.5rem;
+    box-sizing:border-box;
+}
+
+.district-table-header-row,
+.district-table-row{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:0;
+    margin:0;
+    list-style: none;
+    width:100%;
+    border-bottom: .1rem solid #BFC8D0;
+    padding-bottom: .9rem;
+}
+
+.district-table-row{
+    align-items: flex-start;
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+}
+
+.district-table-header-row li{
+    color:#868E96;
+}
+
+.district-table-header-row li:nth-child(1),
+.district-table-row li:nth-child(1){
+    width:28rem;
+    padding-right:1rem;
+}
+.district-table-header-row li:nth-child(2),
+.district-table-row li:nth-child(2){
+    width:9rem;
+}
+.district-table-header-row li:nth-child(3),
+.district-table-row li:nth-child(3){
+    width:9rem;
+}
+.district-table-header-row li:last-child,
+.district-table-row li:last-child{
+    width:19rem;
+}
+
+@media screen and (max-width: 1600px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    html {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 1140px){
+    header{
+        font-size:80%;
+    }
+    .search-input {
+        width: 15rem;
+    }
+    .sidebar-wrapper{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .filters-wrapper{
+        margin-top:3rem;
+    }
+    .filter-dashboard:nth-child(1){
+        margin-left: 0;
+    }
+    .filter-dashboard{
+        margin-top:1rem;
+    }
+    .tools-wrapper{
+        margin-top: 1.75rem;
+        font-size: 95%;
+        overflow: scroll;
+    }
+
+    .tools-wrapper > a{
+        min-width:9rem;
+    }
+
+    .tools-wrapper > a:nth-child(2){
+        min-width:19rem;
+    }
+
+    .tools-wrapper > label{
+        min-width:16rem;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    html {
+        font-size: 10px;
+    }
+    header{
+        font-size:70%;
+    }
+
+    .logo-text{
+        font-size:1rem;
+    }
+}
+
+@media screen and (max-width:959px){
+
+    html{
+        font-size:90%;
+    }
+
+    .header-wrapper{
+        justify-content:space-around;
+    }
+
+    .logo-wrapper{
+        display:none;
+    }
+
+    .profile-button{
+        font-size:90%;
+    }
+}
+
+@media screen and (max-width:830px){
+    .form-input-wrapper{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 100%;
+    }
+
+    .sidebar-wrapper{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .login-form {
+        margin-top: 0;
+        max-width: 100%;
+        min-height: 100vh;
+        height: 100vh;
+        box-sizing: border-box;
+    }
+
+    .login-form > h2 {
+        margin: .885rem 0 .885rem 2.916rem;
+    }
+
+    .login-form > section {
+        width: 100%;
+        border: none;
+        height: 100%;
+        padding: 1.666rem .8333rem;
+    }
+
+    .login-form > section > input[type="submit"] {
+        width: 100%;
+        margin-top: auto;
+    }
+}
+
+@media screen and (max-width:767px){
+    body{
+        padding:0;
+    }
+    .main-menu{
+        bottom: 0%;
+        width: 100%;
+        height: 4rem;
+        padding:0;
+    }
+    .main-menu h1{
+        display: none;
+    }
+    .main-menu ul{
+        display: flex;
+        flex-direction:row;
+        margin:0 auto;
+        width: 100%;
+        overflow: auto;
+    }
+    .main-menu ul li:hover{
+        background: transparent;
+    }
+
+}
+
+@media screen and (max-width:549px){
+
+    .header-wrapper{
+        justify-content: flex-end;
+    }
+
+    /*заготовка под всплывашку поиска для включения свойство display перевести в flex*/
+    .search-wrapper{
+        display:none;
+        justify-content: center;
+        position:absolute;
+        top:0;
+        width:99%;
+        height:100%;
+        background-color: #495057;
+        padding-top:.5rem;
+        z-index:100;
+    }
+
+    .search-icon-button-wrapper{
+        display:flex;
+        justify-content: center;
+        align-items:center;
+        padding:0 .75rem;
+    }
+
+    .filter-icon-button-wrapper{
+        display:flex;
+        justify-content: center;
+        align-items:center;
+        padding:0 .75rem;
+    }
+
+    /*заготовка под всплывашку поиска для включения свойство display перевести в flex*/
+    .profile-wrapper{
+        display:none;
+        justify-content: center;
+        align-items: flex-start;
+        position:absolute;
+        top:0;
+        width:99%;
+        height:100%;
+        background-color: #495057;
+        z-index:100;
+    }
+
+    .profile-wrapper p, .profile-wrapper a{
+        margin-top:1rem;
+    }
+
+    .profile-icon-button-wrapper{
+        display:flex;
+        justify-content: center;
+        align-items:center;
+        padding:0 .75rem;
+    }
+
+    /*тут начинается второй контейнер которые содержит заголовок, кнопки и фильтрацию*/
+
+    .back-to-school-button {
+        position: absolute;
+        top: 5%;
+        right:0;
+        padding: 1rem 0;
+        border-radius:50%;
+        background: #FF8F70;
+        height: .6rem;
+        width: 2.6rem;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0px 6px 6px rgba(80, 75, 75, .50);
+    }
+
+    .back-to-school-button > svg {
+        fill:#fff;
+    }
+
+    .title{
+        position:absolute;
+        top:0;
+        margin:1rem 0;
+        font-size: 1.05rem;
+        max-width: 18rem;
+    }
+
+    .fix-title{
+        top: 4% !important;
+    }
+
+    .addschool-button{
+        width:3.5rem;
+        height:3.5rem;
+        position:fixed;
+        right:1%;
+        bottom:6%;
+        border-radius:50%;
+        box-shadow: 0px 6px 6px rgba(80, 75, 75, .50);
+        font-size: 1.6rem;
+    }
+    .addschool-button>span{
+        display: none;
+    }
+
+    .filters-wrapper{
+        display: none;
+    }
+
+    .filters-wrapper{
+        position: absolute;
+        top:0;
+        width:99%;
+        height:100%;
+        background-color:#495057;
+        padding-top:.5rem;
+
+    }
+
+    /*пришлось немного накидать неудобного стиля*/
+    .filters-wrapper > label > span{
+        display: none;
+    }
+
+    .filters-wrapper > label{
+        margin-left:0;
+    }
+
+    .filters-wrapper > label > select{
+        margin-top:.85rem;
+    }
+
+    .action-zone{
+        justify-content: flex-end;
+    }
+}
+
+@media screen and (max-width: 424px){
+    html{
+        font-size: 80%;
+    }
+
+    .appeal-table-header-row li:nth-child(6),
+    .appeal-table-row li:nth-child(6){
+        padding-left:1rem;
+    }
+
+    .appeal-table-row li:nth-child(6) > .action-zone{
+        flex-direction: column-reverse;
+        align-items: flex-end;
+        justify-content: space-around;
+        height:10rem;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    html {
+        font-size: 100%;
+    }
+}
+
+@media print {
+    .main-menu {display:none;}
+    .addschool-button {display: none;}
+    .header-wrapper {display: none;}
+}
